@@ -25,6 +25,10 @@ describe('example', () => {
   });
 });
 
+it ('deberia retornar pokemones por nombre', => {
+expect(nombre()).toBe(nombre del pokemon)() 
+
+
 it ('deberia retornar pokemones en orden descendente del 1 al 150 cuando se pida orden del 1 al 150', => {
 expect(orden num()).toBe(1 al 151)() 
 
