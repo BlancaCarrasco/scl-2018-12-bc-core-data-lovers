@@ -3,6 +3,7 @@ const filterData = (data, condition) => {
       return element.type.includes(condition) === true
   })
   return filteredData;
+  
 }
 
 window.filterData = filterData;
