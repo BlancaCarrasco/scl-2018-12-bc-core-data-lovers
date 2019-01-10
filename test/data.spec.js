@@ -11,7 +11,7 @@ describe('example', () => {
   });
 });
 */
-
+/*
 require('../src/data.js');
 
 
@@ -50,3 +50,4 @@ it('deberia retornar pokemones en orden de la Z a la A cuando se pida orden de l
 it('deberia retornar pokemones  por tipo cuando se pida un tipo en especifico', () => {
   expect(tipo()).toBe(tipo)
 });
+*/

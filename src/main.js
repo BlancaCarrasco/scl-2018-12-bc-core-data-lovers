@@ -53,6 +53,7 @@ selectType.addEventListener("change", () => {
         </div>
         </div> `
     })
+
     const tiposPokemon = [];
 dataPokemon.forEach(pokemon => {
   pokemon.type.forEach(tipo => {
@@ -60,24 +61,50 @@ dataPokemon.forEach(pokemon => {
     if (indice === -1) {
       tiposPokemon.push(tipo)
     }
-  });
+  });console.log(tiposPokemon)
 });
 return tiposPokemon;
 
 });
-const buscarPorNombre = function (nombre, dataPokemon) {
-    const resultado = dataPokemon.filter(pokemon => pokemon.name.toUpperCase() === nombre.toUpperCase());
+// //const buscarPorNombre = function (nombre, dataPokemon) {
+//    // const resultado = dataPokemon.filter(pokemon => pokemon.name.toUpperCase() === nombre.toUpperCase());
     
-    return resultado;
+//    // return resultado;
   
-}
-  const imprimirArregloPokemons = () => {
-  const pokemonesFiltrados = buscarPorNombre('pikachu', data);
-}
-imprimirArregloPokemons(pokemonesFiltrados);
+// }
+//   const imprimirArregloPokemons = () => {
+//   const pokemonesFiltrados = buscarPorNombre('pikachu', data);
+// }
+// imprimirArregloPokemons(pokemonesFiltrados);
 
 //Que se cargue solo esto en un principio
 window.onload = showData(data);
+var ctx = document.getElementById('myChart').getContext('2d');
+
+var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ["grass", "poison", "fire", "flying", "water", "bug", "normal","electric", "ground", "fighting", "psychic", "rock", "ice", "ghost","dragon"],
+       
+        datasets: [{ 
+           
+            label: "tipos de Pokemon",
+            backgroundColor: 'orange(35,66, 132)',
+            borderColor: 'black(255, 99, 132)',
+            
+            data: [14,33 , 19,12 , 32, 12,24,9,14,8,14,11,5,3,3 ],
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+
+
+
 
 
 
