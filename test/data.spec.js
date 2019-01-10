@@ -11,7 +11,7 @@ describe('example', () => {
   });
 });
 */
-/*
+
 require('../src/data.js');
 
 
@@ -25,12 +25,12 @@ describe('example', () => {
   });
 });
 
-it('deberia retornar pokemones por nombre', => {
+it('deberia retornar pokemones por nombre',() => {
   expect(nombre()).toBe('nombrePokemon')
 });
 
 
-it('deberia retornar pokemones en orden descendente del 1 al 150 cuando se pida orden del 1 al 150', => {
+it('deberia retornar pokemones en orden descendente del 1 al 150 cuando se pida orden del 1 al 150',() => {
   expect(numerico()).toBe('1 al 151')
 
 });
@@ -50,4 +50,4 @@ it('deberia retornar pokemones en orden de la Z a la A cuando se pida orden de l
 it('deberia retornar pokemones  por tipo cuando se pida un tipo en especifico', () => {
   expect(tipo()).toBe(tipo)
 });
-*/
+
