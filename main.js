@@ -63,7 +63,18 @@ dataPokemon.forEach(pokemon => {
   });
 });
 return tiposPokemon;
+
 });
+const buscarPorNombre = function (nombre, dataPokemon) {
+    const resultado = dataPokemon.filter(pokemon => pokemon.name.toUpperCase() === nombre.toUpperCase());
+    
+    return resultado;
+  
+}
+  const imprimirArregloPokemons = () => {
+  const pokemonesFiltrados = buscarPorNombre('pikachu', data);
+}
+imprimirArregloPokemons(pokemonesFiltrados);
 
 //Que se cargue solo esto en un principio
 window.onload = showData(data);
