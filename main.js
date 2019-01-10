@@ -82,8 +82,8 @@ window.onload = showData(data);
 var ctx = document.getElementById('myChart').getContext('2d');
 
 var chart = new Chart(ctx, {
-    // The type of chart we want to create
-    type: 'line',
+    // tipo de grafico
+    type: 'bar',
 
     // The data for our dataset
     data: {
@@ -94,8 +94,10 @@ var chart = new Chart(ctx, {
             label: "tipos de Pokemon",
             backgroundColor: 'orange(35,66, 132)',
             borderColor: 'black(255, 99, 132)',
+            hoverBackgroundColor: 'blue(234,123,45)',
             
             data: [14,33 , 19,12 , 32, 12,24,9,14,8,14,11,5,3,3 ],
+            
         }]
     },
 
