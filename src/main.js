@@ -52,8 +52,7 @@ selectType.addEventListener("change", () => {
         </div>
         </div>
         </div> `
-    })
-
+    });
     const tiposPokemon = [];
 dataPokemon.forEach(pokemon => {
   pokemon.type.forEach(tipo => {
@@ -79,20 +78,36 @@ return tiposPokemon;
 
 //Que se cargue solo esto en un principio
 window.onload = showData(data);
-var ctx = document.getElementById('myChart').getContext('2d');
 
-var chart = new Chart(ctx, {
+
+let ctx = document.getElementById('myChart').getContext('2d');
+let chart = new Chart(ctx, {
     // tipo de grafico
     type: 'bar',
-
-    // The data for our dataset
     data: {
         labels: ["grass", "poison", "fire", "flying", "water", "bug", "normal","electric", "ground", "fighting", "psychic", "rock", "ice", "ghost","dragon"],
        
         datasets: [{ 
            
             label: "tipos de Pokemon",
-            backgroundColor: 'orange(35,66, 132)',
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)',
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)',
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                
+            ],
             borderColor: 'black(255, 99, 132)',
             hoverBackgroundColor: 'blue(234,123,45)',
             
