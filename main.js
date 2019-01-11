@@ -2,6 +2,7 @@ const data = POKEMON.pokemon;
 
 const containerRoot = document.getElementById("root");
 const selectType = document.getElementById("type");
+const selectSort = document.getElementById("sort");
 
 //Mostrar toda la data en CARDS
 const showData = (data) => {
