@@ -1,8 +1,75 @@
 const data = POKEMON.pokemon;
 
+
+// Elements
 const containerRoot = document.getElementById("root");
 const selectType = document.getElementById("type");
 const selectSort = document.getElementById("sort");
+
+// Funcion de ordenado, data = Arreglos de pokemons, sortBy= Opcion copn que se quiere ordenar
+const sortData = (data, sortBy) => {
+  // console.log(data, sortOrder);
+
+  if (sortBy == 'Ordenar A-Z') {
+    return data.sort((a, b) => {
+      if (a.name > b.name) {
+        return 1;
+      }
+      if (a.name < b.name) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+
+  if (sortBy == 'Ordenar Z-A') {
+    return data.sort((a, b) => {
+      if (a.name < b.name) {
+        return 1;
+      }
+      if (a.name > b.name) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+  if (sortBy == 'Ordenar 001-151') {
+    return data.sort((a, b) => {
+      if (a.num > b.num) {
+        return 1;
+      }
+      if (a.num < b.num) {
+        return -1;
+      }
+      return 0;
+
+    });
+  }
+
+  if (sortBy == 'Ordenar 151-001') {
+    return data.sort((a, b) => {
+      if (a.num < b.num) {
+        return 1;
+      }
+      if (a.num > b.num) {
+        return -1;
+      }
+      return 0;
+    });
+  }
+
+};
+
+selectSort.addEventListener("change", () => {
+  // Obtenemos el valor seleccionado en el el select
+  let condition = selectSort.options[selectSort.selectedIndex].text;
+  // Creamos un array con los pokemones ordenados
+  let sortedPokemons = sortData(data, condition);
+  // Borramos los pokemons
+  containerRoot.innerHTML = "";
+  // Mostramos los pokemones ordenados
+  showData(sortedPokemons);
+});
 
 //Mostrar toda la data en CARDS
 const showData = (data) => {
@@ -79,6 +146,9 @@ return tiposPokemon;
 
 //Que se cargue solo esto en un principio
 window.onload = showData(data);
+
+
+
 const pokemonTypes = ["grass", "poison", "fire", "flying", "water", "bug", "normal","electric", "ground", "fighting", "psychic", "rock", "ice", "ghost","dragon"];
 let arreglo = [];
 const pokemonCountPerType = (pokemonData, pokemonType) => {
@@ -106,7 +176,7 @@ const pokemonCountPerType = (pokemonData, pokemonType) => {
     arreglo.push(contador)
   });
 
-  //console.log('Arreglo de valores', arreglo);
+  console.log('Arreglo de valores', arreglo);
 
 };
 
@@ -141,58 +211,6 @@ let chart = new Chart(ctx, {
             borderColor: 'black(255, 99, 132)',
             hoverBackgroundColor: 'blue(234,123,45)',
             data: arreglo,
-        }]
-    },
-
-    // Configuration options go here
-    options: {}
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-let ctx = document.getElementById('myChart').getContext('2d');
-let chart = new Chart(ctx, {
-    // tipo de grafico
-    type: 'bar',
-    data: {
-        labels: ["grass", "poison", "fire", "flying", "water", "bug", "normal","electric", "ground", "fighting", "psychic", "rock", "ice", "ghost","dragon"],
-       
-        datasets: [{ 
-           
-            label: "tipos de Pokemon",
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.5)',
-                'rgba(54, 162, 235, 0.5)',
-                'rgba(255, 206, 86, 0.5)',
-                'rgba(75, 192, 192, 0.5)',
-                'rgba(153, 102, 255, 0.5)',
-                'rgba(255, 159, 64, 0.5)',
-                'rgba(255, 99, 132, 0.5)',
-                'rgba(54, 162, 235, 0.5)',
-                'rgba(255, 206, 86, 0.5)',
-                'rgba(75, 192, 192, 0.5)',
-                'rgba(153, 102, 255, 0.5)',
-                'rgba(255, 159, 64, 0.5)',
-                'rgba(255, 99, 132, 0.5)',
-                'rgba(54, 162, 235, 0.5)',
-                'rgba(255, 206, 86, 0.5)',
-                
-            ],
-            borderColor: 'black(255, 99, 132)',
-            hoverBackgroundColor: 'blue(234,123,45)',
-            
-            data: [14,33 , 19,12 , 32, 12,24,9,14,8,14,11,5,3,3 ],
-            
         }]
     },
 
