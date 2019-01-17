@@ -135,10 +135,10 @@ dataPokemon.forEach(pokemon => {
 return tiposPokemon;
 
 });
-// //const buscarPorNombre = function (nombre, dataPokemon) {
-//    // const resultado = dataPokemon.filter(pokemon => pokemon.name.toUpperCase() === nombre.toUpperCase());
+// const buscarPorNombre = function (nombre, dataPokemon) {
+// const resultado = dataPokemon.filter(pokemon => pokemon.name.toUpperCase() === nombre.toUpperCase());
     
-//    // return resultado;
+// return resultado;
   
 // }
 //   const imprimirArregloPokemons = () => {
@@ -218,7 +218,10 @@ let chart = new Chart(ctx, {
 
     // Configuration options go here
     options: {}
+
+    
 });
+
 
 
 
