@@ -6,7 +6,7 @@ const filterData = (data, condition) => {
   
 }
 
-window.filterData = filterData;
+
 
 
 //Sort

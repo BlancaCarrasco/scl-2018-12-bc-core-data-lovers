@@ -1,5 +1,19 @@
 /* Estilos tarjetas */
 
+body{
+  background-image: url(http://subirimagen.me/uploads/20190117075857.png);
+  background-attachment: fixed;
+  background-size: cover; 
+  font-family: 'Lato light', sans-serif;
+  font-weight: 300;
+font-style: normal;}
+
+h1{
+  text-align: center;
+  font-size: 50px;
+  color:rgb(17, 32, 4);
+}
+
 .container-fluid {
   display: flex;
   flex-direction: row;
