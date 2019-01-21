@@ -1,14 +1,16 @@
+// TO-DO cambiar el nobre de data a esta constante para mejorar mi estructura de la pagina
 const data = POKEMON.pokemon;
+// Filtros Activos  [´per_type´, 'sort', ]
+//var filtrosActivos = []; 
+// Resultados 
+//var currentPokemons = [];
+
 // Elements
 const containerRoot = document.getElementById("root");
-
 // Borrar Pokemones que se esten mostrado (Limpiar pantalla) 
-
 const clearScreen = () => {
   containerRoot.innerHTML = "";
 }
-
-
 //Mostrar toda la data en CARDS
 const showData = (data) => {
   // Limpiamos pantalla
