@@ -6,11 +6,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-header {
+/* header {
   width: 1000px;
   height:170px;
   background: url("/imagenes pokemon/descarga.jpg");
-}
+} */
 #bienvenidos{
 text-align: center;
 color: rgb(39, 38, 38)
