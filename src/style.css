@@ -1,22 +1,64 @@
 /* Estilos tarjetas */
 
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+*{
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  width: 1000px;
+  height:170px;
+  background: url("/imagenes pokemon/descarga.jpg");
+}
+#bienvenidos{
+text-align: center;
+color: rgb(39, 38, 38)
+}
 body {
   background-image: url(http://subirimagen.me/uploads/20190117075857.png);
   background-attachment: fixed;
-  background-size: cover; 
-  font-family: 'Lato light', sans-serif;
+  background-size: cover;
+  font-family: 'Lobster', cursive;
   font-weight: 200;
   font-style: normal;
   text-align: center;
   font-size: 20px;
-  color:rgb(37, 13, 1)}
-
-p, h1{
-  font-family: '';
-  font-weight: 200;
-  font-style: normal;
+  color: rgb(37, 13, 1)
+}
+#type,
+#sort {
+  font-size: 15px;
+  font-family: Verdana, Helvetica;
+  font-weight: bold;
+  color: black;
+  font-style: italic;
+  background: #e4bcb0;
+  border-radius: 6px;
+  border: 03px double;
+  width: 150px;
+  height: 30px;
+}
+#input-busqueda {
+  height: 40px;
+  width: 200px;
+  border-radius: 6px;
+  border: 03px double;
+  font-size: 20px;
   text-align: center;
-  font-size: 40px;
+  background: #e4bcb0;
+}
+#boton-busqueda,#estadística {
+  font-size: 15px;
+  font-family: Verdana, Helvetica;
+  font-weight: bold;
+  color: black;
+  font-style: italic;
+  background: #e4bcb0;
+  border-radius: 6px;
+  border: 03px double;
+  width: 150px;
+  height: 30px;
 }
 .container-fluid {
   display: flex;
@@ -25,18 +67,16 @@ p, h1{
   flex-wrap: wrap;
   align-items: baseline;
 }
-
 .card {
   width: 300px;
-  height: 300px;
+  height: 350px;
   margin: 1em;
-  background:#fff;
-  box-shadow: 0 20px 50px rgba(0,0,0,.1);
+  background: rgb(218, 205, 205);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .1);
   border-radius: 1em;
   text-align: center;
   align-content: flex-start;
 }
-
 .card .box {
   text-align: center;
   padding: 1.25em;
@@ -58,12 +98,11 @@ p, h1{
 }
 .card .box p {
   font-size: 14px;
-  background: #e91e63;
-  color: #fff;
+  background: #0aec83;
+  color: rgb(24, 17, 1);
   display: inline-block;
   padding: 0.25em 0.6em;
   border-radius: 15px;
-
 }
 .card .box span {
   display: inline-flex;
